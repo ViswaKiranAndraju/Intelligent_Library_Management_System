@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/admin_das_style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/images/vk_logo.jpg" alt="Library">
+        </div>
+
+        <ul>
+            <li class="item"><a href="/admin_dash">Home Page</a></li>
+            <li class="item"><a href="/admin_dash_profile">Profile</a></li>
+            {{!-- <li class="item"><a href="/login">Login</a></li> --}}
+            {{!-- <li class="item"><a href="/register">Register</a></li> --}}
+            <li class="item"><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <h2>Admin Features </h2>
+        <ul>
+            <li class="box"><a href="/addstudent">Add Students</a></li>
+            <li class="box"><a href="/add_books">Add Books</a></li>
+            <li class="box"><a href="/issue_books">Issue Books</a></li>
+            <li class="box"><a href="/return_books">Return Books</a></li>
+            <li class="box"><a href="/issue_fine">Issue Fines</a></li>
+        </ul> 
+        <ul>
+            <li class="box"><a href="/search_student">Search Students</a></li>
+            <li class="box"><a href="/view_books">View Books</a></li>
+            <li class="box"><a href="/view_students">View Students</a></li>
+            <li class="box"><a href="/remove_students">Remove Students</a></li>
+            <li class="box"><a href="/remove_books">Remove Books</a></li>
+        </ul>
+        <ul>
+            <li class="box"><a href="/viewFines">View Fines</a></li>
+            <li class="box"><a href="/RemoveFines">Remove Fines</a></li>
+            <li class="box"><a href="/enter_library">Enter Library</a></li>
+            <li class="box"><a href="/exit_library">Exit Library</a></li>
+            <li class="box"><a href="/viewStdLog">View Student Log</a></li>
+        </ul>
+    </div>
+</body>
+</html>

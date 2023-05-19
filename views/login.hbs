@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Library</title>
+    <link rel="stylesheet" href="/css/loginstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/c9bcffc57e.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="scriptvis.js"></script> -->
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/images/vk_logo.jpg" alt="Library">
+        </div>
+
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="#client-services">About</a></li>
+            <li class="item"><a href="#contact">Contact</a></li>
+            <li class="item"><a href="/login">Login</a></li>
+            <li class="item"><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+    <div class="hei">
+        <h1 class="h-primary">Welcome to Central Library</h1>
+    </div>
+
+    <section id="home">
+        <div class="form-box">
+            <div class="container">
+                <div class="text">Sign In</div>
+                {{#if msg}}
+                <p class="{{msg_type}}">{{msg}}</p>
+                {{/if}}
+                <form action="/auth/login" method="post">
+                    <div class="data">
+                        <label for="email">Email</label>
+                        <input type="email" name ="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="data">
+                        <label for="password">Password</label>
+                        <input type="password" name ="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-row">
+                        <div class="cap col-md-6">
+                            <input type="text" class="form-control" readonly id="capt">
+                        </div>
+                        <div class="cap col-md-6">
+                            <input type="text" class="form-control" id="textinput" placeholder="Enter Captcha">
+                    </div>
+                    
+                    <h6 style="font-size: 19px; margin:2px 100px" >Captcha not visible <img src="/images/refresh.jpg" width="30px" onclick="cap()"></h6>
+                    <div class="forgot-pass">
+                        {{!-- <a href="#">Forgot Password?</a> --}}
+                    </div>
+                    <div class="btnn" onclick="validcap()" class="btn btn-lg btn-success btn-block"><a href="/admin_dash" style="text-decoration: none;color:black;">
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="signup-link">Not a member?<a href="/register">Register</a></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="client-services">
+        <h1 class="h-secondary center">About</h1>
+        <p>
+            A university library is an important resource for students, faculty, and researchers. It is a place where people can access a wide range of information resources, including books, journals, and databases, as well as receive help from librarians and other staff. University libraries also provide space for study and research, as well as access to technology and other tools for learning.
+            Overall, the university library plays an essential role in supporting the academic mission of the institution and providing access to information resources that are essential for learning, research, and scholarship.
+            <br>
+            <br>
+        <b class="hei_lib">Library Timings:</b>
+                Monday to Friday - 9.00 A.M. to 8.00 P.M. <br>
+                Saturday - 9.00 A.M. to 5.00 P.M.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-secondary center">Contact Us</h1>
+        <p>
+            Dr. SRILATHA CHEBROLU <br>
+            Associate Dean - International Students & Library Affairs <br>
+            Mobile: +91 8330967036 <br>
+            E- mail: ad_library@nitandhra.ac.in <br>
+            <br>
+            For more details Visit : 
+            <a target="_blank" href="https://www.nitandhra.ac.in/main/library"><b>NIT Library</b></a>
+        </p>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; Viswa All rights reserved!
+        </div>
+    </footer>
+    <script type="text/javascript">
+  function cap(){
+    var alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'
+                 ,'W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i',
+                 'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', '!','@','#','$','%','^','&','*','+'];
+                 var a = alpha[Math.floor(Math.random()*71)];
+                 var b = alpha[Math.floor(Math.random()*71)];
+                 var c = alpha[Math.floor(Math.random()*71)];
+                 var d = alpha[Math.floor(Math.random()*71)];
+                 var e = alpha[Math.floor(Math.random()*71)];
+                 var f = alpha[Math.floor(Math.random()*71)];
+
+                 var final = a+b+c+d+e+f;
+                 document.getElementById("capt").value=final;
+               }
+               function validcap(){
+                var stg1 = document.getElementById('capt').value;
+                var stg2 = document.getElementById('textinput').value;
+                if(stg1==stg2){
+                  alert("Form is validated Succesfully");
+                  return true;
+                }else{
+                  alert("Please enter a valid captcha");
+                  return false;
+                }
+               }
+</script>
+    {{!-- <script src="scriptvis.js"></script> --}}
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="/css/avs_style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/returnbook">
+            <h3>RETURN BOOKS</h3>
+            <hr>
+
+            <label for="return_id"><b>Return ID</b></label>
+            <input type="number" placeholder="Enter Return ID" name = "return_id" id = "return_id" required>
+    <br>
+    <br>
+            <label for="std_id"><b>Student ID</b></label>
+            <input type="number" placeholder="Enter Student ID" name = "std_id" id = "std_id" required>
+    <br>
+    <br>
+            <label for="book_id"><b>Book ID</b></label>
+            <input type="number" placeholder="Enter book ID" name="book_id" id="book_id" required>
+    <br>
+    <br>
+            <label for="returned_date"><b>Return Date</b></label>
+            <input type="date" placeholder="Enter Return Date" name="returned_date" id="returned_date" required>
+    <br>
+    
+            {{!-- <label for="due_date"><b>Due Date</b></label>
+            <input type="date" placeholder="Enter Due Date" name="due_date" id="due_date" required> --}}
+            {{!-- <label for="email-id"><b>Email Id</b></label>
+            <input type="text" placeholder="Enter Email Id" name="email" id = "email" required> --}}
+
+            {{!-- <label for="add"><b>Address</b></label>
+            <input type="text" placeholder="Enter Address" name="add" id = "add" required> --}}
+
+            
+            <br>
+            <button type="submit" class ="registerbtn">Return Book</button>
+            <a href="/admin_dash" style="color:black">Back to Home Page</a>
+
+            <br>
+
+            {{#if mesg}}
+            <h3>Data Inserted</h3>
+            {{/if}}
+            {{#if checkmesg}}
+            <h3>Already Present</h3>
+            {{/if}}
+        </form>
+        
+    </div>
+</body>
+</html>

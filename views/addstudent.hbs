@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="/css/avs_style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/add">
+            <h3>ADD STUDENT</h3>
+            <hr>
+
+            <label for="std_id"><b>Student Id</b></label>
+            <input type="number" placeholder="Enter Student Id" name = "std_id" id = "std_id" required>
+    <br>
+    {{!-- <br> --}}
+            <label for="name"><b>Student Name</b></label>
+            <input type="text" placeholder="Enter name" name = "name" id = "name" required>
+
+            <label for="phone"><b>Phone Number</b></label>
+            <input type="phone" placeholder="Enter Phone number" name="phone" id="phone" required>
+
+            <label for="email-id"><b>Email Id</b></label>
+            <input type="text" placeholder="Enter Email Id" name="email" id = "email" required>
+
+            {{!-- <label for="add"><b>Address</b></label>
+            <input type="text" placeholder="Enter Address" name="add" id = "add" required> --}}
+
+            <div class="gender_g">
+                <strong>Gender</strong>
+                <input type="radio" name="gender" id="" value="Male">Male
+                <input type="radio" name="gender" id="" value="Female">Female
+            </div>
+            <button type="submit" class ="registerbtn">Add Student</button>
+            <a href="/admin_dash" style="color:black">Back to Home Page</a>
+
+            <br>
+
+            {{#if mesg}}
+            <h3>Data Inserted</h3>
+            {{/if}}
+            {{#if checkmesg}}
+            <h3>Already Present</h3>
+            {{/if}}
+        </form>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+
+/* CSS Reset */
+*{
+    margin:0px;
+    padding:0px;
+  }
+  
+  /* Navigation Bar */
+  #navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  
+  /* Navigation Bar Logo and Img */
+  #logo{
+    margin:2px 34px;
+  }
+  
+  #logo img{
+    margin: 2px 2px;
+    height: 36px;
+    border-radius: 10px;
+  }
+  
+  /* Navigation Bar List Styling */
+  #navbar ul{
+    display: flex;
+  }
+  
+  #navbar ul li{
+    list-style: none;
+    font-family: 'Bree Serif', serif; 
+    font-size: 20px;
+  }
+  
+  #navbar ul li a{
+    color: rgb(35, 13, 63);
+    display: block;
+    padding: 6px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  
+  #navbar ul li a:hover{
+    color:black;
+    background-color: wheat;
+  }
+  
+  /* Home Section */
+  #home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 200px;
+    height: 300px;
+    margin: 130px 0px;
+    
+  }
+  #home::before{
+    content:"";
+    background: url('/images/Library.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    height: 90%;
+    width:100%;
+    opacity: 0.81;
+    z-index: -1;
+    
+  }
+  
+  #home h1{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(29, 11, 46);
+      text-align: center;
+  }
+  
+  #home p{
+    font-family: 'Bree Serif', serif;
+    color: rgb(29, 11, 46);
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  #client-services{
+    text-align: center;
+    justify-content: center;
+    margin: 20px 0px;
+    font-size: 18px;
+    background-color: #F5F5DC;
+  }
+  
+  .hei_lib{
+    font-size: 20px;
+  }
+  
+  #client-services p{
+    border: 2px solid grey;
+    font-family: 'Bree Serif', serif;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    height: 200px;
+    padding: 9px;
+    color: rgb(29, 11, 46);
+    margin: 10px 0px;
+    padding: 12px 12px;
+    background-color: rgb(174, 169, 247);
+    border-radius: 20px;
+  }
+  
+  /* Contact Section */
+  #contact{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin: -19px 0px;
+    background-color: #F5F5DC;
+    font-size: 18px;
+  }
+  #contact p{
+    border: 2px solid grey;
+    font-family: 'Bree Serif', serif;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    height: 165px;
+    padding: 9px;
+    color: rgb(29, 11, 46);
+    margin: 10px 0px;
+    padding: 12px 12px;
+    background-color: rgb(174, 169, 247);
+    border-radius: 20px;
+  }
+  
+  
+  footer{
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    padding: 24px 20px;
+    font-size: 20px;
+  }
+  
+  .form-box{
+    width:90%;
+    max-width:450px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* background:#F5F5DC; */
+    padding: 10px 60px 70px;
+    text-align:center;
+  }
+  
+  .form-box h1{
+    font-size : 30px;
+    margin-bottom : 30px;
+    color: #3c00a0;
+    position : relative;
+  }
+  
+  .form-box h1::after{
+    content: '';
+    width : 30px;
+    height:4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom:-12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .input-field{
+    background: #ffffff;
+    margin: 10px 0px;
+    border-radius: 3px;
+    display: flex;
+    align-items:center;
+    max-height: 55px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+  }
+  
+  input{
+    width:100%;
+    background: transparent;
+    border: 0;
+    outline:0;
+    padding:14px 15px;
+  
+  }
+  
+  .btn-field{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-field button{
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border:0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+  }
+  
+  .input-group{
+    height: 200px;
+  }
+  
+  .btn-field button.disable{
+    background: #eaeaea;
+    color: #555;
+  }
+  
+  .form-box p{
+    font-size: 2px;
+  }
+  
+  .form-box .h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 45px;
+    padding: 3px;
+    font-weight: bolder;
+    width: 547px;
+    margin: 27px auto;
+    /* color: white; */
+  }
+  /* Utility Classes */
+  
+  .h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.6rem;
+    padding: 12px;
+  }
+  .h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.6rem;
+    padding: 12px;
+  }
+  .h-ter{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.6rem;
+    padding: 12px;
+  }
+  .center{
+    text-align: center;
+  }
+  .btn{
+    padding:6px 20px;
+    border: 2px solid black;
+    background-color: blueviolet;
+    color: aqua;
+    margin:17px;
+    font-size: 1.5rem;
+    border-radius:10px ;
+    cursor: pointer;
+  }
+  
+  
+  

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/avs_style.css">
+</head>
+<body>
+    <div class="container">
+      <form action="/exitLibrary">
+   <h3>Enter Student Id</h3>
+   
+    <hr>
+ 
+    <label for="std_id"><b>Student ID</b></label>
+            <input type="number" placeholder="Enter Student ID" name="std_id" id="std_id" required>
+    <br>
+    <button type="submit" class="registerbtn">Exit Library</button>
+    {{!-- <br> --}}
+    <a href="/admin_dash" style="color:black">BACK TO HOME PAGE</a>
+
+    <br>
+    {{#if mesg1}}
+    <h3>Data inserted!</h3>
+    {{/if}}
+
+     {{#if mesg2}}
+    <h3>Data Not inserted!</h3>
+    {{/if}}
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="/css/avs_style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/addbook">
+            <h3>ADD BOOKS</h3>
+            <hr>
+
+            <label for="book_id"><b>Book Id</b></label>
+            <input type="number" placeholder="Enter Book Id" name = "book_id" id = "book_id" required>
+    <br>
+    <br>
+            <label for="title"><b>Title</b></label>
+            <input type="text" placeholder="Enter Book name" name = "title" id = "title" required>
+
+            <label for="author"><b>Author</b></label>
+            <input type="text" placeholder="Enter author name" name="author" id="author" required>
+
+            <label for="ISBN"><b>ISBN</b></label>
+            <input type="number" placeholder="Enter ISBN" name = "ISBN" id = "ISBN" required>
+    <br>
+    <br>
+
+            <label for="Publisher"><b>Publisher</b></label>
+            <input type="text" placeholder="Enter Publisher name" name="Publisher" id="Publisher" required>
+        <br>
+    {{!-- <br> --}}
+
+            <label for="Publication_Date"><b>Publication_Date</b></label>
+            <input type="date" placeholder="Enter Publication Date" name="Publication_Date" id="Publication_Date" required>
+        <br>
+    <br>
+
+            <label for="Edition"><b>Edition</b></label>
+            <input type="number" placeholder="Enter Edition" name = "Edition" id = "Edition" required>
+    <br>
+        <br>
+
+
+            <label for="subject"><b>Subject</b></label>
+            <input type="text" placeholder="Enter subject name" name="subject" id="subject" required>
+    <br>
+
+            <label for="category"><b>Category</b></label>
+            <input type="text" placeholder="Enter category name" name="category" id="category" required>
+
+
+            {{!-- <label for="email-id"><b>Email Id</b></label>
+            <input type="text" placeholder="Enter Email Id" name="email" id = "email" required> --}}
+
+            {{!-- <label for="add"><b>Address</b></label>
+            <input type="text" placeholder="Enter Address" name="add" id = "add" required> --}}
+
+            <label for="quantity"><b>Book Quantity</b></label>
+            <input type="number" placeholder="Enter Book Quantity" name = "quantity" id = "quantity" required>
+        <br>
+        <br>
+            <label for="availability"><b>Book Availability</b></label>
+            <input type="number" placeholder="Enter Book Availability" name = "availability" id = "availability" required>
+        <br>
+        <br>
+            <label for="rack_number"><b>Book rack_number</b></label>
+            <input type="number" placeholder="Enter Book rack_number" name = "rack_number" id = "rack_number" required>
+    
+            <br>
+            <button type="submit" class ="registerbtn">Add Book</button>
+            <a href="/admin_dash" style="color:black">Back to Home Page</a>
+
+            <br>
+
+            {{#if mesg}}
+            <h3>Data Inserted</h3>
+            {{/if}}
+            {{#if checkmesg}}
+            <h3>Already Present</h3>
+            {{/if}}
+        </form>
+        
+    </div>
+</body>
+</html>

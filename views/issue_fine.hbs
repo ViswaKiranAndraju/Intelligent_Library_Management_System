@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Fines</title>
+    <link rel="stylesheet" href="/css/avs_style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/issuefine">
+            <h3>ISSUE FINE</h3>
+            <hr>
+
+            <label for="fine_id"><b>Fine ID</b></label>
+            <input type="number" placeholder="Enter Fine ID" name = "fine_id" id = "fine_id" required>
+    <br>
+    <br>
+            <label for="issue_id"><b>Issue ID</b></label>
+            <input type="number" placeholder="Enter Issue ID" name = "issue_id" id = "issue_id" required>
+    <br>
+    <br>
+            <label for="fine_amount"><b>Fine Amount</b></label>
+            <input type="number" placeholder="Enter fine amount" name="fine_amount" id="fine_amount" required>
+    <br>
+    
+            {{!-- <label for="email-id"><b>Email Id</b></label>
+            <input type="text" placeholder="Enter Email Id" name="email" id = "email" required> --}}
+
+            {{!-- <label for="add"><b>Address</b></label>
+            <input type="text" placeholder="Enter Address" name="add" id = "add" required> --}}
+
+            
+            <br>
+            <button type="submit" class ="registerbtn">Issue Fine</button>
+            <a href="/admin_dash" style="color:black">Back to Home Page</a>
+
+            <br>
+
+            {{#if mesg}}
+            <h3>Data Inserted</h3>
+            {{/if}}
+            {{#if checkmesg}}
+            <h3>Already Present</h3>
+            {{/if}}
+        </form>
+        
+    </div>
+</body>
+</html>

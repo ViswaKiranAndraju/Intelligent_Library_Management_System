@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/std_das_style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/images/vk_logo.jpg" alt="Library">
+        </div>
+
+        <ul>
+            <li class="item"><a href="/admin_dash">Home Page</a></li>
+            <li class="item"><a href="/admin_dash_profile">Profile</a></li>
+            {{!-- <li class="item"><a href="/login">Login</a></li> --}}
+            {{!-- <li class="item"><a href="/register">Register</a></li> --}}
+            <li class="item"><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <h2>Admin Profile</h2>
+        <h3>Name: Admin</h3>
+        <h3>Email: admin@gmail.com{{User.Email}}</h3>
+    </div>
+</body>
+</html>
